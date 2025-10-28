@@ -128,10 +128,13 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+    height: 500px; /* Add explicit height */
+    min-height: 500px; /* Ensure minimum height */
   }
   
   canvas {
     max-width: 100%;
+    height: 100% !important; /* Force full height */
   }
   
   .footer {
@@ -154,4 +157,119 @@
       margin-bottom: 10px;
     }
   }
+
+  .column-selector {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #e2e8f0;
+  }
   
+  .column-selector h3 {
+    margin-bottom: 10px;
+    color: #4e54c8;
+    font-size: 1.1rem;
+  }
+  
+  .column-selector label {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .chart-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .control-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .control-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #374151;
+  }
+  
+  .control-group input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+  
+  .chart-actions {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .chart-actions button {
+    background: #10b981;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  
+  .chart-actions button:hover {
+    background: #059669;
+  }
+  
+  #colorInputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .color-input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .color-input-group input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid #dc2626;
+  }
+  
+  .success-message {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid #10b981;
+  }
+  
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #4e54c8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

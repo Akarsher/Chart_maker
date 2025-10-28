@@ -33,14 +33,52 @@
     </section>
 
     <section class="chart-section">
-      <h2>3️⃣ Choose Chart Type & Generate</h2>
-      <select id="chartType">
-        <option value="bar">Bar</option>
-        <option value="line">Line</option>
-        <option value="pie">Pie</option>
-        <option value="doughnut">Doughnut</option>
-      </select>
-      <button id="generateChart">Generate Chart</button>
+      <h2>3️⃣ Configure Your Chart</h2>
+      
+      <div class="chart-controls">
+        <div class="control-group">
+          <label for="chartType">Chart Type:</label>
+          <select id="chartType">
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+            <option value="pie">Pie Chart</option>
+            <option value="doughnut">Doughnut Chart</option>
+            <option value="scatter">Scatter Plot</option>
+            <option value="radar">Radar Chart</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="chartTitle">Chart Title:</label>
+          <input type="text" id="chartTitle" placeholder="Enter chart title..." value="Your Chart">
+        </div>
+
+        <div class="control-group">
+          <label for="colorScheme">Color Scheme:</label>
+          <select id="colorScheme">
+            <option value="default">Default</option>
+            <option value="blues">Blues</option>
+            <option value="greens">Greens</option>
+            <option value="warm">Warm Colors</option>
+            <option value="cool">Cool Colors</option>
+            <option value="custom">Custom</option>
+          </select>
+        </div>
+
+        <div class="control-group" id="customColorPicker" style="display: none;">
+          <label>Custom Colors:</label>
+          <div id="colorInputs"></div>
+          <button type="button" id="addColor">+ Add Color</button>
+        </div>
+      </div>
+
+      <button id="generateChart">🎨 Generate Chart</button>
+      
+      <div class="chart-actions" style="display: none;" id="chartActions">
+        <button id="downloadChart">📥 Download PNG</button>
+        <button id="downloadPDF">📄 Download PDF</button>
+        <button id="copyChart">📋 Copy to Clipboard</button>
+      </div>
 
       <div class="chart-container">
         <canvas id="myChart"></canvas>
