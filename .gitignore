@@ -1,0 +1,18 @@
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+*.env

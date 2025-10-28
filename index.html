@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chart Maker</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- SheetJS -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header class="top-header">
+    <h1>📊 Chart Maker</h1>
+    <p>Upload your Excel/CSV data & generate beautiful charts</p>
+  </header>
+
+  <main class="main-container">
+    <section class="upload-section">
+      <h2>1️⃣ Upload Your File</h2>
+      <input type="file" id="fileInput" accept=".xlsx, .csv" />
+      <p class="note">Supports .xlsx or .csv files</p>
+    </section>
+
+    <section class="preview-section">
+      <h2>2️⃣ Preview Data</h2>
+      <div id="dataPreview" class="table-container">
+        <!-- Table will be inserted here -->
+      </div>
+    </section>
+
+    <section class="chart-section">
+      <h2>3️⃣ Choose Chart Type & Generate</h2>
+      <select id="chartType">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+        <option value="doughnut">Doughnut</option>
+      </select>
+      <button id="generateChart">Generate Chart</button>
+
+      <div class="chart-container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Chart Maker | Made with 💙</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
